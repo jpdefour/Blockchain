@@ -21,16 +21,6 @@ namespace BlockChain
             }
         }
 
-        //public Block(string data) 
-        //{
-        //    Index = 0;
-        //    Timestamp = DateTime.Now.Ticks;
-        //    PreviousHash = null;
-        //    Data = data;
-        //    Nonce = 0;
-        //    Hash = BlockHashCalculator.CalculateHash(this);
-        //}
-
         public Block(int index, long timestamp, string previousHash, string data)
         {
             Index = index;
