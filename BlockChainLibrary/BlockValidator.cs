@@ -39,6 +39,11 @@ namespace BlockChain
                     return false;
                 }
 
+                if (IsBlockHashNotNullAndHashValid(newBlock))
+                {
+                    return false;
+                }
+
                 if (IsNewBlockPreviousHashNotNullAndPreviousHashValid(newBlock, previousBlock))
                 {
                     return false;
