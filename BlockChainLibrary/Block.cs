@@ -34,9 +34,12 @@ namespace BlockChain
         public override string ToString()
         {
             StringBuilder builder = new StringBuilder();
-            builder.Append("Block #").Append(Index).Append(" [previousHash : ").Append(PreviousHash).Append(", ").
-            Append("timestamp : ").Append(new DateTime(Timestamp).ToLongDateString()).Append(", ").Append("data : ").Append(Data).Append(", ").
-            Append("hash : ").Append(Hash).Append("]");
+            builder
+                .Append("Block #").AppendLine(Index.ToString())
+                .Append(" [previousHash : ").Append(PreviousHash).AppendLine(", ")
+                .Append("timestamp : ").Append(new DateTime(Timestamp).ToString("f")).AppendLine(", ")
+                .Append("data : ").Append(Data).AppendLine(", ")
+                .Append("hash : ").Append(Hash).AppendLine("]");
             return builder.ToString();
         }
 

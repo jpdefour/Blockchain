@@ -39,8 +39,7 @@ namespace BlockChain
                     return false;
                 }
 
-                if (newBlock.PreviousHash == null ||
-                    !newBlock.PreviousHash.Equals(previousBlock.Hash))
+                if (IsBlockHashNotNullAndHashValid(newBlock))
                 {
                     return false;
                 }
